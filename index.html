@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCamp - Твоя оценка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-pattern">
+        <div class="dot-pattern top-left"></div>
+        <div class="dot-pattern bottom-right"></div>
+    </div>
+
+    <div class="container">
+        <header class="theme-header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>SKYCAMP</h1>
+                    <p id="subtitle">Последний день смены!</p>
+                </div>
+                <div class="character">
+                    <img src="photo/kaifer.png" alt="Кайфер">
+                </div>
+            </div>
+        </header>
+
+        <main id="formCard" class="theme-card">
+            <h2 class="question">Готов ли ты рекомендовать лагерь Скайпро своим друзьям?</h2>
+            
+            <div class="rating-section">
+                <div class="rating-grid" id="ratingButtons"></div>
+                <div class="rating-progress-bar">
+                    <div class="rating-progress-fill" id="progressBar" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <form id="surveyForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Твое имя</label>
+                        <input type="text" id="name" required placeholder="Как тебя зовут?">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Город</label>
+                        <select id="city" required>
+                            <option value="" disabled selected>Откуда ты?</option>
+                            <option value="Чебоксары">Чебоксары</option>
+                            <option value="Астрахань">Астрахань</option>
+                            <option value="Нижний Новгород">Нижний Новгород</option>
+                            <option value="Воронеж">Воронеж</option>
+                            <option value="Красноярск">Красноярск</option>
+                            <option value="Тюмень">Тюмень</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width" id="badCommentGroup">
+                        <label for="commentBad">Что можно улучшить? <span class="required-star">*</span></label>
+                        <textarea id="commentBad" placeholder="Расскажи честно"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="commentGood">Что крутого запомнилось?</label>
+                        <textarea id="commentGood" placeholder="Самый кайфовый момент"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="theme-btn" id="submitBtn">ОТПРАВИТЬ</button>
+                <div class="loader" id="loader">
+                    <div class="spinner"></div> Отправляем...
+                </div>
+            </form>
+        </main>
+
+        <div id="successCard" class="theme-card success" style="display:none;">
+            <h1 class="success-title">ТЫ СУПЕР!</h1>
+            
+            <div class="motivation-photo">
+                <img src="photo/13.png" alt="Учись в Скайпро!">
+            </div>
+            
+            <div class="motivation-text-block" style="text-align: left;">
+    <h2 style="font-size: 2em; font-weight: 900; color: var(--dark); margin-bottom: 20px; text-transform: uppercase;">
+        ТЫ ПРОШЁЛ SKYCAMP!
+    </h2>
+    
+    <p style="font-size: 1.3em; line-height: 1.6; font-weight: 700; margin-bottom: 40px;">
+        10 дней хайпа, крутых проектов и новых друзей!<br>
+        Ты научился создавать сайты, рисовать дизайн и работать с ИИ.<br>
+        <span style="color: var(--primary);">Это реально мощно!</span>
+    </p>
+    
+    <h3 style="font-size: 1.6em; font-weight: 900; color: var(--primary); margin: 40px 0 25px; text-transform: uppercase;">
+        ЧТО ТЕБЯ ЖДЁТ В СЕНТЯБРЕ:
+    </h3>
+    
+    <ul style="list-style: none; padding: 0; font-size: 1.2em; line-height: 2; margin: 30px 0;">
+        <li style="margin-bottom: 12px;">Создание игр и приложений — то, чем пользуются миллионы</li>
+        <li style="margin-bottom: 12px;">Делать крутой дизайн для игр, сайтов и школьных проектов</li>
+        <li style="margin-bottom: 12px;">Работа с нейросетями</li>
+        <li style="margin-bottom: 12px;">Крутые друзья и лучшие кураторы!</li>
+    </ul>
+    
+    <h3 style="font-size: 1.6em; font-weight: 900; color: var(--dark); margin: 40px 0 15px; text-transform: uppercase;">
+        А САМОЕ ГЛАВНОЕ — ТЫ НАУЧИШЬСЯ ЗАРАБАТЫВАТЬ!
+    </h3>
+    
+    <p style="font-size: 1.3em; font-weight: 700; color: var(--dark); line-height: 1.6; margin: 0 0 40px;">
+        Не просто учиться, а <strong>получать деньги за свои проекты</strong>!<br>
+        Наши ученики уже делают игры, дизайн и сайты на заказ.
+    </p>
+    
+    <p style="font-size: 1.2em; margin: 30px 0; font-weight: 700;">
+        <strong style="font-size: 1.3em; color: var(--primary);">500+ учеников</strong> уже прокачали навыки в Скайпро<br>
+        Теперь твоя очередь!
+    </p>
+    
+    <div style="margin: 40px 0;">
+        <label class="custom-checkbox" for="wantToLearn" style="display: inline-flex; padding: 20px 30px;">
+            <input type="checkbox" id="wantToLearn" name="wantToLearn">
+            <span class="checkmark"></span>
+            <span class="checkbox-label-text">Хочу учиться в Скайпро!</span>
+        </label>
+    </div>
+</div>
+            
+            <button class="theme-btn secondary" id="restartBtn">Готово</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
