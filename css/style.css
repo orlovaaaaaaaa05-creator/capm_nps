@@ -547,74 +547,46 @@ textarea { min-height: 80px; resize: vertical; }
 
 /* ТЕЛЕФОНЫ — 10 кружков в ряд */
 @media (max-width: 480px) {
-    .container { padding: 10px; }
-    .theme-card { padding: 15px 10px; }
-    .question { font-size: 1em; margin-bottom: 15px; }
+    .container { padding: 10px !important; }
+    .theme-card { padding: 15px 10px !important; }
+    .question { font-size: 1em !important; margin-bottom: 15px !important; }
     
-    .rating-section { margin: 15px 0 25px; }
+    .rating-section { margin: 15px 0 25px !important; }
     
-    /* Ключевое: grid с фиксированными колонками, подписи не распирают */
     .rating-grid {
-        display: grid;
-        grid-template-columns: repeat(10, minmax(0, 1fr));
-        gap: 2px;
-        padding: 0;
+        display: grid !important;
+        grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
+        gap: 2px !important;
+        padding: 0 !important;
     }
     
     .rating-btn {
-        min-width: 0;
-        overflow: visible;
+        min-width: 0 !important;
+        overflow: visible !important;
     }
     
     .circle { 
-        width: 28px; 
-        height: 28px; 
-        font-size: 0.85em;
-        border-width: 2px;
-        box-shadow: 2px 2px 0 var(--dark);
-        margin: 0 auto;
-    }
-    
-    /* Подписи абсолютно позиционированы — не влияют на ширину колонки */
-    .label {
-        position: relative;
-        font-size: 0.45em;
-        margin-top: 4px;
-        max-width: 100%;
-        min-height: 18px;
-        line-height: 1.0;
-        word-break: break-word;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .rating-progress-bar { margin-top: 20px; }
-    .success-title { font-size: 1.8em; }
-    .motivation-text { font-size: 1em; }
-    .motivation-text.highlight { font-size: 1.1em; padding: 12px; }
-    .custom-checkbox { padding: 12px 15px; }
-    .checkbox-label-text { font-size: 1em; }
-}
-
-/* ОЧЕНЬ УЗКИЕ ЭКРАНЫ (iPhone SE, 320px) */
-@media (max-width: 360px) {
-    .container { padding: 8px; }
-    .theme-card { padding: 12px 8px; }
-    
-    .rating-grid {
-        gap: 1px;
-    }
-    
-    .circle { 
-        width: 26px; 
-        height: 26px; 
-        font-size: 0.8em;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.85em !important;
+        border-width: 2px !important;
+        box-shadow: 2px 2px 0 var(--dark) !important;
+        margin: 0 auto !important;
     }
     
     .label {
-        font-size: 0.4em;
-        min-height: 16px;
-        margin-top: 3px;
+        position: relative !important;
+        font-size: 0.45em !important;
+        margin-top: 4px !important;
+        max-width: 100% !important;
+        min-height: 18px !important;
+        line-height: 1.0 !important;
+        word-break: break-word !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
     }
+
+    .rating-progress-bar { margin-top: 20px !important; }
+    .success-title { font-size: 1.8em !important; }
 }
