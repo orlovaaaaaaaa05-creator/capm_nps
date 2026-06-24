@@ -480,3 +480,122 @@ textarea { min-height: 80px; resize: vertical; }
         margin: 20px 0 30px;
     }
 }
+/* =========================================
+   9. АДАПТИВНОСТЬ
+   ========================================= */
+@media (max-width: 1024px) {
+    .rating-grid {
+        gap: 10px;
+    }
+    
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3em;
+    }
+    
+    .label {
+        font-size: 0.65em;
+        margin-top: 10px;
+        max-width: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-text h1 { font-size: 2em; }
+    .character { width: 120px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .theme-card { padding: 20px 15px; }
+    .question { font-size: 1.3em; }
+    
+    .rating-grid {
+        gap: 6px;
+    }
+    
+    .circle { 
+        width: 48px; 
+        height: 48px; 
+        font-size: 1.1em;
+        border-width: 2px;
+        box-shadow: 2px 2px 0 var(--dark);
+    }
+    
+    .label {
+        font-size: 0.55em;
+        margin-top: 6px;
+        max-width: 48px;
+        min-height: 24px;
+        line-height: 1.0;
+    }
+
+    .success-title { font-size: 2em; }
+    
+    .motivation-text {
+        font-size: 1.1em;
+    }
+    
+    .motivation-text.highlight {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+    
+    .custom-checkbox {
+        padding: 15px 20px;
+        width: 100%;
+    }
+    
+    .checkbox-label-text {
+        font-size: 1.1em;
+    }
+}
+
+/* 10 кружков в один ряд на телефоне */
+@media (max-width: 480px) {
+    .container { padding: 15px 10px; }
+    
+    .rating-grid {
+        gap: 3px;
+    }
+    
+    .circle { 
+        width: 30px; 
+        height: 30px; 
+        font-size: 0.9em;
+        border-width: 2px;
+        box-shadow: 2px 2px 0 var(--dark);
+    }
+    
+    .label {
+        font-size: 0.5em;
+        margin-top: 4px;
+        max-width: 30px;
+        min-height: 20px;
+        line-height: 1.0;
+        word-break: break-word;
+    }
+    
+    .rating-section {
+        margin: 20px 0 30px;
+    }
+    
+    .question { font-size: 1.1em; }
+}
+
+/* Совсем узкие экраны (iPhone SE, старые Android) */
+@media (max-width: 360px) {
+    .rating-grid {
+        gap: 2px;
+    }
+    
+    .circle { 
+        width: 28px; 
+        height: 28px; 
+        font-size: 0.85em;
+    }
+    
+    .label {
+        font-size: 0.45em;
+        max-width: 28px;
+        min-height: 18px;
+    }
+}
